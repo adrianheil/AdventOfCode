@@ -11,6 +11,7 @@ func Day01_2021(data: [String.SubSequence]) {
     print("ℹ️ Day 1")
     let input = data.map { Int($0)!}
     print(Part_1(input: input))
+    print(Part_2(input: input))
 }
 
 private func Part_1(input: [Int]) -> Int {
@@ -19,3 +20,18 @@ private func Part_1(input: [Int]) -> Int {
             .filter{$0.0 < $0.1}
             .count
 }
+
+private func Part_2(input: [Int]) -> Int {
+    var windowArr:[Int] = []
+    
+    for i in 0..<input.count-2 {
+        let tmp = input[i..<i+3].reduce(0, +)
+        windowArr.append(tmp)
+    }
+    
+    return zip(windowArr, windowArr.dropFirst())
+        .lazy
+        .filter{$0.0 < $0.1}
+        .count
+}
+
