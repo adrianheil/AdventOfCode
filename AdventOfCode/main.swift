@@ -7,5 +7,8 @@
 
 import Foundation
 
-print("Hello, World!")
+print("Results 2021")
+Result_2021()
+print("Results 2022")
+result_2022()
 

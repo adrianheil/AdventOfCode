@@ -8,23 +8,36 @@
 
 /* Begin PBXBuildFile section */
 		3AABFFBB293809B3002C31B7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFBA293809B3002C31B7 /* main.swift */; };
+		3AABFFC2293809CA002C31B7 /* readFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFC1293809CA002C31B7 /* readFile.swift */; };
+		3AABFFC729380D2E002C31B7 /* Day_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFC629380D2E002C31B7 /* Day_1.swift */; };
+		3AABFFCB29388D7D002C31B7 /* Result_2022.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFCA29388D7D002C31B7 /* Result_2022.swift */; };
+		3AABFFCD29388D95002C31B7 /* Result_2021.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFCC29388D95002C31B7 /* Result_2021.swift */; };
+		3AABFFCF29388E33002C31B7 /* 2022_Day_1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFCE29388E33002C31B7 /* 2022_Day_1.swift */; };
+		3AABFFD329393FBB002C31B7 /* Resources in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3AABFFD229393F20002C31B7 /* Resources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		3AABFFB5293809B3002C31B7 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = usr/share/man/man1;
+			dstSubfolderSpec = 7;
 			files = (
+				3AABFFD329393FBB002C31B7 /* Resources in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3AABFFB7293809B3002C31B7 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AABFFBA293809B3002C31B7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		3AABFFC1293809CA002C31B7 /* readFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = readFile.swift; sourceTree = "<group>"; };
+		3AABFFC629380D2E002C31B7 /* Day_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day_1.swift; sourceTree = "<group>"; };
+		3AABFFCA29388D7D002C31B7 /* Result_2022.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_2022.swift; sourceTree = "<group>"; };
+		3AABFFCC29388D95002C31B7 /* Result_2021.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result_2021.swift; sourceTree = "<group>"; };
+		3AABFFCE29388E33002C31B7 /* 2022_Day_1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_1.swift; sourceTree = "<group>"; };
+		3AABFFD229393F20002C31B7 /* Resources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +70,31 @@
 		3AABFFB9293809B3002C31B7 /* AdventOfCode */ = {
 			isa = PBXGroup;
 			children = (
+				3AABFFC829388D51002C31B7 /* 2022 */,
+				3AABFFC529380D24002C31B7 /* 2021 */,
 				3AABFFBA293809B3002C31B7 /* main.swift */,
+				3AABFFC1293809CA002C31B7 /* readFile.swift */,
+				3AABFFCA29388D7D002C31B7 /* Result_2022.swift */,
+				3AABFFCC29388D95002C31B7 /* Result_2021.swift */,
+				3AABFFD229393F20002C31B7 /* Resources */,
 			);
 			path = AdventOfCode;
+			sourceTree = "<group>";
+		};
+		3AABFFC529380D24002C31B7 /* 2021 */ = {
+			isa = PBXGroup;
+			children = (
+				3AABFFC629380D2E002C31B7 /* Day_1.swift */,
+			);
+			path = 2021;
+			sourceTree = "<group>";
+		};
+		3AABFFC829388D51002C31B7 /* 2022 */ = {
+			isa = PBXGroup;
+			children = (
+				3AABFFCE29388E33002C31B7 /* 2022_Day_1.swift */,
+			);
+			path = 2022;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -72,6 +107,7 @@
 				3AABFFB3293809B3002C31B7 /* Sources */,
 				3AABFFB4293809B3002C31B7 /* Frameworks */,
 				3AABFFB5293809B3002C31B7 /* CopyFiles */,
+				3AABFFD42939403A002C31B7 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -115,12 +151,37 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3AABFFD42939403A002C31B7 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\necho \"copying $SRCROOT/AdventOfCode/Ressources to $TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\"\ncp -R \"$SRCROOT/AdventOfCode/Resources\" \"$TARGET_BUILD_DIR/$CONTENTS_FOLDER_PATH\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		3AABFFB3293809B3002C31B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AABFFCB29388D7D002C31B7 /* Result_2022.swift in Sources */,
 				3AABFFBB293809B3002C31B7 /* main.swift in Sources */,
+				3AABFFCD29388D95002C31B7 /* Result_2021.swift in Sources */,
+				3AABFFC2293809CA002C31B7 /* readFile.swift in Sources */,
+				3AABFFCF29388E33002C31B7 /* 2022_Day_1.swift in Sources */,
+				3AABFFC729380D2E002C31B7 /* Day_1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
