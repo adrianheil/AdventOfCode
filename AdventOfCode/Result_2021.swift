@@ -9,6 +9,5 @@ import Foundation
 
 func Result_2021() {
     let file = readFile(filename: "Resources/2021_Day_1.txt")
-    let result = countIncreases(data: file)
-    print(result)
+    Day01_2021(data: file)
 }

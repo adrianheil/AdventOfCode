@@ -9,7 +9,7 @@ import Foundation
 
 
 func Day01_2022(data: [String.SubSequence]) {
-    print("Day 1")
+    print("ℹ️ Day 1")
     let input = data.map { String($0)}
     //input = input.components("block")
     //print(input)
@@ -23,12 +23,17 @@ func Day01_2022(data: [String.SubSequence]) {
             cal = 0
         }
     }
-    print("Part 1")
-    print(res.max()!)
-    print("Part 2")
-    print(res
+    print(Part_1(input: res))
+    print(Part_2(input: res))
+}
+
+private func Part_1(input: [Int]) -> Int {
+    return input.max()!
+}
+
+private func Part_2(input: [Int]) -> Int {
+    return input
         .sorted(by: >)
         .prefix(3)
         .reduce(0) { $0 + $1 }
-    )
 }
