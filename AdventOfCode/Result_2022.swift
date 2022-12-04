@@ -18,4 +18,7 @@ func result_2022() {
     
     file = readFile(filename: "Resources/2022_Day_3.txt")
     Day03_2022(data: file)
+    
+    file = readFile(filename: "Resources/2022_Day_4.txt")
+    Day04_2022(data: file)
 }

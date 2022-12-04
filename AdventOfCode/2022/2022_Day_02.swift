@@ -15,7 +15,6 @@ func Day02_2022(data: [String.SubSequence]) {
     print(Part_1(input: input))
     print(Part_2(input: input))
 }
-//13359
 
 
 private func Part_1(input: [String]) -> Int {
