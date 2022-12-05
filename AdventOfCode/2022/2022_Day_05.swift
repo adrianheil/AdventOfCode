@@ -28,6 +28,8 @@ func Day05_2022(data: [String.SubSequence]) {
     // catch empty stacks between crate stacks and remove braces
     for i in 0 ..< blockIndex-1 {
         stacks.append(cratesInput[i]
+            .replacingOccurrences(of: "                           ", with: "0 0 0 0 0 0 0")
+            .replacingOccurrences(of: "                       ", with: "0 0 0 0 0 0")
             .replacingOccurrences(of: "                   ", with: "0 0 0 0 0")
             .replacingOccurrences(of: "               ", with: "0 0 0 0")
             .replacingOccurrences(of: "           ", with: "0 0 0")
