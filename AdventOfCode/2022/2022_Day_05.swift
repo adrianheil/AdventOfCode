@@ -25,14 +25,19 @@ func Day05_2022(data: [String.SubSequence]) {
     
     var stacks:[String] = []
     
+    // catch empty stacks between crate stacks and remove braces
     for i in 0 ..< blockIndex-1 {
         stacks.append(cratesInput[i]
+            .replacingOccurrences(of: "                   ", with: "0 0 0 0 0")
             .replacingOccurrences(of: "               ", with: "0 0 0 0")
+            .replacingOccurrences(of: "           ", with: "0 0 0")
             .replacingOccurrences(of: "       ", with: "0 0")
-            .replacingOccurrences(of: "   ", with: "0") // separators
+            .replacingOccurrences(of: "   ", with: "0")
             .alphanumeric)
     }
-    var cratesArr = [[Character]](repeating: [Character](repeating: " ", count: 100), count: numberOfStacks)
+    //initialise array and transpose the input
+    let maxCrates = numberOfStacks * cratesInput.count-1
+    var cratesArr = [[Character]](repeating: [Character](repeating: " ", count: maxCrates), count: numberOfStacks)
     for i in 0..<stacks.count {
         for j in 0..<stacks[i].count {
             if stacks[i][j] != "0" {
