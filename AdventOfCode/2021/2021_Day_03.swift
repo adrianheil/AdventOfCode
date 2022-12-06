@@ -95,7 +95,7 @@ private func getArrayCO2(input: [String], i: Int) -> [String] {
             count_1 += 1
         }
     }
-
+    
     if input.count == 1 {
         return input
     }
