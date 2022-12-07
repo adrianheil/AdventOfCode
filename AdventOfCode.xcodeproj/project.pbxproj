@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A00A3D5293FE27400F2FFA5 /* 2022_Day_07.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A00A3D4293FE27400F2FFA5 /* 2022_Day_07.swift */; };
 		3A617888293CA7F300A0E302 /* 2022_Day_04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A617887293CA7F300A0E302 /* 2022_Day_04.swift */; };
 		3A61788A293D200800A0E302 /* 2021_Day_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A617889293D200800A0E302 /* 2021_Day_02.swift */; };
 		3A61788C293DD2E000A0E302 /* 2022_Day_05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61788B293DD2E000A0E302 /* 2022_Day_05.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A00A3D4293FE27400F2FFA5 /* 2022_Day_07.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_07.swift; sourceTree = "<group>"; };
 		3A617887293CA7F300A0E302 /* 2022_Day_04.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_04.swift; sourceTree = "<group>"; };
 		3A617889293D200800A0E302 /* 2021_Day_02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2021_Day_02.swift; sourceTree = "<group>"; };
 		3A61788B293DD2E000A0E302 /* 2022_Day_05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_05.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				3A617887293CA7F300A0E302 /* 2022_Day_04.swift */,
 				3A61788B293DD2E000A0E302 /* 2022_Day_05.swift */,
 				3A9D2152293F15B4002D0BF2 /* 2022_Day_06.swift */,
+				3A00A3D4293FE27400F2FFA5 /* 2022_Day_07.swift */,
 			);
 			path = 2022;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A00A3D5293FE27400F2FFA5 /* 2022_Day_07.swift in Sources */,
 				3A617888293CA7F300A0E302 /* 2022_Day_04.swift in Sources */,
 				3AABFFCB29388D7D002C31B7 /* Result_2022.swift in Sources */,
 				3AABFFD8293B4DB2002C31B7 /* 2022_Day_03.swift in Sources */,
