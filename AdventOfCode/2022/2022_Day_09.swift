@@ -16,7 +16,7 @@ func Day09_2022(data: [String.SubSequence]) {
 }
 
 private func MoveRope(input: [String], ropeLength: Int) -> Int {
-    var grid = [[Character]](repeating: [Character](repeating: ".", count: 1000), count: 1000)
+    var grid = [[UInt8]](repeating: [UInt8](repeating: 0, count: 1000), count: 1000)
     var pos = [[Int]](repeating: [Int](repeating: 333, count: 2), count: 10)
     for line in input {
         let split = line.components(separatedBy: " ")
@@ -65,18 +65,14 @@ private func MoveRope(input: [String], ropeLength: Int) -> Int {
                 }
                 
             }
-            grid[pos[ropeLength-1][0]][pos[ropeLength-1][1]] = "#"
+            grid[pos[ropeLength-1][0]][pos[ropeLength-1][1]] = 1
         }
     }
+    
     return grid
-        .map { item in
-            item.map { item2 in
-                if item2 == "#" {
-                    return 1
-                }
-                else {
-                    return 0
-                }
+        .map {
+            $0.map {
+                Int($0)
             }.reduce(0, +)
         }.reduce(0, +)
 }
