@@ -11,13 +11,11 @@ import Foundation
 func Day01_2022(data: [String.SubSequence]) {
     print("ℹ️ Day 1")
     let input = data.map { String($0)}
-    //input = input.components("block")
-    //print(input)
     var cal = 0
     var res:[Int] = []
-    for i in 0..<input.count {
-        if input[i] != "block" {
-            cal = cal + Int(input[i])!
+    for line in input {
+        if line != "block" {
+            cal += Int(line)!
         } else {
             res.append(cal)
             cal = 0
