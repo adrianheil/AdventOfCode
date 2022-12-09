@@ -24,6 +24,7 @@
 		3AABFFD62939DEC1002C31B7 /* 2022_Day_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFD52939DEC1002C31B7 /* 2022_Day_02.swift */; };
 		3AABFFD8293B4DB2002C31B7 /* 2022_Day_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFD7293B4DB2002C31B7 /* 2022_Day_03.swift */; };
 		3AABFFDA293B4E39002C31B7 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFD9293B4E39002C31B7 /* extensions.swift */; };
+		3AD4081329431BFF00EB7DEA /* 2022_Day_09.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD4081229431BFF00EB7DEA /* 2022_Day_09.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +59,7 @@
 		3AABFFD52939DEC1002C31B7 /* 2022_Day_02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_02.swift; sourceTree = "<group>"; };
 		3AABFFD7293B4DB2002C31B7 /* 2022_Day_03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_03.swift; sourceTree = "<group>"; };
 		3AABFFD9293B4E39002C31B7 /* extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		3AD4081229431BFF00EB7DEA /* 2022_Day_09.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_09.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				3A9D2152293F15B4002D0BF2 /* 2022_Day_06.swift */,
 				3A00A3D4293FE27400F2FFA5 /* 2022_Day_07.swift */,
 				3A0458A8294129B200158443 /* 2022_Day_08.swift */,
+				3AD4081229431BFF00EB7DEA /* 2022_Day_09.swift */,
 			);
 			path = 2022;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				3A0458A9294129B200158443 /* 2022_Day_08.swift in Sources */,
 				3AABFFCD29388D95002C31B7 /* Result_2021.swift in Sources */,
 				3A9D2153293F15B4002D0BF2 /* 2022_Day_06.swift in Sources */,
+				3AD4081329431BFF00EB7DEA /* 2022_Day_09.swift in Sources */,
 				3A61788E293E561300A0E302 /* 2021_Day_03.swift in Sources */,
 				3A61788A293D200800A0E302 /* 2021_Day_02.swift in Sources */,
 				3AABFFC2293809CA002C31B7 /* readFile.swift in Sources */,
