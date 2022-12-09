@@ -14,4 +14,5 @@ print("▶️ Results 2022")
 result_2022()
 let end = Date()
 
+print("Executed in:")
 print(end.timeIntervalSince(start))

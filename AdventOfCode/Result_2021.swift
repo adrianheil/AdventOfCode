@@ -8,12 +8,9 @@
 import Foundation
 
 func Result_2021() {
-    var file = readFile(filename: "Resources/2021_Day_1.txt")
-    Day01_2021(data: file)
+    Day01_2021()
     
-    file = readFile(filename: "Resources/2021_Day_2.txt")
-    Day02_2021(data: file)
+    Day02_2021()
     
-    file = readFile(filename: "Resources/2021_Day_3.txt")
-    Day03_2021(data: file)
+    Day03_2021()
 }

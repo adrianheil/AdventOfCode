@@ -7,9 +7,9 @@
 
 import Foundation
 
-func Day02_2021(data: [String.SubSequence]) {
+func Day02_2021() {
     print("ℹ️ Day 2")
-    let input = data.map { String($0)}
+    let input = readFile(filename: "Resources/2021_Day_2.txt").map { String($0)}
     
     
     print(Part_1(input: input))

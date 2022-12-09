@@ -7,9 +7,9 @@
 
 import Foundation
 
-func Day05_2022(data: [String.SubSequence]) {
+func Day05_2022() {
     print("ℹ️ Day 5")
-    let input = data.map { String($0)}
+    let input = readFile(filename: "Resources/2022_Day_5.txt").map { String($0)}
     var blockIndex = 0
     for i in 0..<input.count {
         if input[i] == "block" {
