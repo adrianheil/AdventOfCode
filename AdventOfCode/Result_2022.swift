@@ -9,6 +9,7 @@ import Foundation
 
 
 func result_2022() {
+    /*
     Day01_2022()
     
     Day02_2022()
@@ -26,4 +27,6 @@ func result_2022() {
     Day08_2022()
     
     Day09_2022()
+     */
+    Day10_2022()
 }

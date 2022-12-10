@@ -13,6 +13,7 @@
 		3A61788A293D200800A0E302 /* 2021_Day_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A617889293D200800A0E302 /* 2021_Day_02.swift */; };
 		3A61788C293DD2E000A0E302 /* 2022_Day_05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61788B293DD2E000A0E302 /* 2022_Day_05.swift */; };
 		3A61788E293E561300A0E302 /* 2021_Day_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61788D293E561300A0E302 /* 2021_Day_03.swift */; };
+		3A6A03F72944970B00E2A608 /* 2022_Day_10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A03F62944970B00E2A608 /* 2022_Day_10.swift */; };
 		3A9D2153293F15B4002D0BF2 /* 2022_Day_06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9D2152293F15B4002D0BF2 /* 2022_Day_06.swift */; };
 		3AABFFBB293809B3002C31B7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFBA293809B3002C31B7 /* main.swift */; };
 		3AABFFC2293809CA002C31B7 /* readFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFC1293809CA002C31B7 /* readFile.swift */; };
@@ -47,6 +48,7 @@
 		3A617889293D200800A0E302 /* 2021_Day_02.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2021_Day_02.swift; sourceTree = "<group>"; };
 		3A61788B293DD2E000A0E302 /* 2022_Day_05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_05.swift; sourceTree = "<group>"; };
 		3A61788D293E561300A0E302 /* 2021_Day_03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2021_Day_03.swift; sourceTree = "<group>"; };
+		3A6A03F62944970B00E2A608 /* 2022_Day_10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_10.swift; sourceTree = "<group>"; };
 		3A9D2152293F15B4002D0BF2 /* 2022_Day_06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_06.swift; sourceTree = "<group>"; };
 		3AABFFB7293809B3002C31B7 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AABFFBA293809B3002C31B7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -93,8 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				3AABFFD9293B4E39002C31B7 /* extensions.swift */,
-				3AABFFC829388D51002C31B7 /* 2022 */,
 				3AABFFC529380D24002C31B7 /* 2021 */,
+				3AABFFC829388D51002C31B7 /* 2022 */,
 				3AABFFBA293809B3002C31B7 /* main.swift */,
 				3AABFFC1293809CA002C31B7 /* readFile.swift */,
 				3AABFFCA29388D7D002C31B7 /* Result_2022.swift */,
@@ -126,6 +128,7 @@
 				3A00A3D4293FE27400F2FFA5 /* 2022_Day_07.swift */,
 				3A0458A8294129B200158443 /* 2022_Day_08.swift */,
 				3AD4081229431BFF00EB7DEA /* 2022_Day_09.swift */,
+				3A6A03F62944970B00E2A608 /* 2022_Day_10.swift */,
 			);
 			path = 2022;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				3A61788E293E561300A0E302 /* 2021_Day_03.swift in Sources */,
 				3A61788A293D200800A0E302 /* 2021_Day_02.swift in Sources */,
 				3AABFFC2293809CA002C31B7 /* readFile.swift in Sources */,
+				3A6A03F72944970B00E2A608 /* 2022_Day_10.swift in Sources */,
 				3AABFFDA293B4E39002C31B7 /* extensions.swift in Sources */,
 				3AABFFCF29388E33002C31B7 /* 2022_Day_01.swift in Sources */,
 				3AABFFD62939DEC1002C31B7 /* 2022_Day_02.swift in Sources */,

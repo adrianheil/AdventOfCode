@@ -15,7 +15,6 @@ func Day07_2022() {
     var fileStructure = [String: Int]()
     for line in input {
         if line.contains("cd ..") {
-            //print(pwd)
             let index = wd.range(of: "/", options: .backwards)?.lowerBound
             wd = String(wd[..<index!])
         }
