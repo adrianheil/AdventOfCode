@@ -42,7 +42,7 @@ private func Part_02(input: [String]) {
         let split = line.components(separatedBy: " ")
         cycle += 1
         CRTLine.append(cycle-1 >= x &&  cycle-1 <= x+2 ? "#" : ".")
-        if (cycle) % 40 == 0 {
+        if cycle % 40 == 0 {
             CRT.append(String(CRTLine))
             CRTLine = ""
             cycle = 0
@@ -62,41 +62,3 @@ private func Part_02(input: [String]) {
         print(line)
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-/*
- if sprite[cycle] == "#" {
-     CRT.append("#")
- } else {
-     CRT.append(".")
- }
- if split[0].contains("addx") {
-     sprite[x] = "."
-     sprite[x+1] = "."
-     sprite[x+2] = "."
-     x += Int(split[1])!
-     sprite[x] = "#"
-     sprite[x+1] = "#"
-     sprite[x+2] = "#"
-     //cycle += 1
- }
- print(cycle, x)
- if (cycle) % 40 == 0 {
-     print("reset")
-     print(CRT)
-     print(sprite)
-     CRT = []
-     //x = 0
- }
- //print(sprite)
-}
- */
