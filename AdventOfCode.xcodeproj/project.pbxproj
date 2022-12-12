@@ -15,6 +15,7 @@
 		3A61788C293DD2E000A0E302 /* 2022_Day_05.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61788B293DD2E000A0E302 /* 2022_Day_05.swift */; };
 		3A61788E293E561300A0E302 /* 2021_Day_03.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A61788D293E561300A0E302 /* 2021_Day_03.swift */; };
 		3A6A03F72944970B00E2A608 /* 2022_Day_10.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6A03F62944970B00E2A608 /* 2022_Day_10.swift */; };
+		3A9A2DD229470EB70042A8E0 /* 2022_Day_12.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9A2DD129470EB70042A8E0 /* 2022_Day_12.swift */; };
 		3A9D2153293F15B4002D0BF2 /* 2022_Day_06.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9D2152293F15B4002D0BF2 /* 2022_Day_06.swift */; };
 		3AABFFBB293809B3002C31B7 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFBA293809B3002C31B7 /* main.swift */; };
 		3AABFFC2293809CA002C31B7 /* readFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AABFFC1293809CA002C31B7 /* readFile.swift */; };
@@ -51,6 +52,7 @@
 		3A61788B293DD2E000A0E302 /* 2022_Day_05.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_05.swift; sourceTree = "<group>"; };
 		3A61788D293E561300A0E302 /* 2021_Day_03.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2021_Day_03.swift; sourceTree = "<group>"; };
 		3A6A03F62944970B00E2A608 /* 2022_Day_10.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_10.swift; sourceTree = "<group>"; };
+		3A9A2DD129470EB70042A8E0 /* 2022_Day_12.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_12.swift; sourceTree = "<group>"; };
 		3A9D2152293F15B4002D0BF2 /* 2022_Day_06.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_06.swift; sourceTree = "<group>"; };
 		3AABFFB7293809B3002C31B7 /* AdventOfCode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AdventOfCode; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AABFFBA293809B3002C31B7 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				3AD4081229431BFF00EB7DEA /* 2022_Day_09.swift */,
 				3A6A03F62944970B00E2A608 /* 2022_Day_10.swift */,
 				3A0F15DB2945F2E0002B927B /* 2022_Day_11.swift */,
+				3A9A2DD129470EB70042A8E0 /* 2022_Day_12.swift */,
 			);
 			path = 2022;
 			sourceTree = "<group>";
@@ -169,6 +172,7 @@
 				TargetAttributes = {
 					3AABFFB6293809B3002C31B7 = {
 						CreatedOnToolsVersion = 14.1;
+						LastSwiftMigration = 1410;
 					};
 				};
 			};
@@ -233,6 +237,7 @@
 				3A6A03F72944970B00E2A608 /* 2022_Day_10.swift in Sources */,
 				3AABFFDA293B4E39002C31B7 /* extensions.swift in Sources */,
 				3AABFFCF29388E33002C31B7 /* 2022_Day_01.swift in Sources */,
+				3A9A2DD229470EB70042A8E0 /* 2022_Day_12.swift in Sources */,
 				3AABFFD62939DEC1002C31B7 /* 2022_Day_02.swift in Sources */,
 				3AABFFC729380D2E002C31B7 /* 2021_Day_01.swift in Sources */,
 			);
@@ -357,10 +362,17 @@
 		3AABFFBF293809B3002C31B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54Q57TQQA6;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -368,9 +380,15 @@
 		3AABFFC0293809B3002C31B7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 54Q57TQQA6;
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
