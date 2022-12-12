@@ -17,7 +17,7 @@ func Day12_2022() {
 private func Part_1(input: [String]) {
     var startX = 0, startY = 0, endX = 0, endY = 0
     var dist = [[Int]](repeating: [Int](repeating: 9999, count: input[0].count+2), count: input.count+2)
-    var map = [[Int]](repeating: [Int](repeating: -50, count: input[0].count+2), count: input.count+2)
+    var map = [[Int]](repeating: [Int](repeating: -9999, count: input[0].count+2), count: input.count+2)
     // start at 1, create a border around the actual map to avoid out of bounds error
     for y in 0..<input.count {
         for x in 0..<input[y].count {
