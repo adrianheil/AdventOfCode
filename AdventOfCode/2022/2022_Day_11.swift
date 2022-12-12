@@ -21,7 +21,9 @@ func Day11_2022() {
 
 private func Throw(input: [String], iterations: Int, numberOfMonkeys: Int) -> Int {
     var items = [[Int]](repeating: [Int](repeating: 0, count: 10), count: numberOfMonkeys)
-    var operations:[String] = []
+    var operation:[Character] = []
+    var operationNumber: [Int] = []
+    var isUsingOld:[Bool] = []
     var inspections = [Int](repeating: 0, count: numberOfMonkeys)
     var testDiv: [Int] = []
     var decisionThrowToMonkey = [[Int]](repeating: [Int](repeating: 255, count: 2), count: numberOfMonkeys)
@@ -38,7 +40,16 @@ private func Throw(input: [String], iterations: Int, numberOfMonkeys: Int) -> In
             }
         }
         else if line.contains("Operation:") {
-            operations.append(line.components(separatedBy: " = ")[1])
+            let split = line.components(separatedBy: " = ")[1]
+            let split2 = split.components(separatedBy: " ")
+            operation.append(split2[1][0])
+            if split2[2] == "old" {
+                isUsingOld.append(true)
+                operationNumber.append(0)
+            } else {
+                isUsingOld.append(false)
+                operationNumber.append(Int(split2[2])!)
+            }
         }
         else if line.contains("Test:") {
             testDiv.append(Int(line.components(separatedBy: "by ")[1])!)
@@ -56,11 +67,10 @@ private func Throw(input: [String], iterations: Int, numberOfMonkeys: Int) -> In
         for monkey in 0..<numberOfMonkeys {
             for item in 0..<items[monkey].count {
                 if items[monkey][item] == 0 { continue }
-                let operation = operations[monkey].components(separatedBy: " ")
                 
-                let number = operation[2] == "old" ? items[monkey][item] : Int(operation[2])!
+                let number = isUsingOld[monkey] ? items[monkey][item] : operationNumber[monkey]
                 
-                var new = operation[1] == "+" ? items[monkey][item] + number : items[monkey][item] * number
+                var new = operation[monkey] == "+" ? items[monkey][item] + number : items[monkey][item] * number
                 if iterations == 20 {
                     new = new / 3
                 }
