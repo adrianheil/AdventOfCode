@@ -7,6 +7,16 @@
 
 import Foundation
 
+class Monkey {
+    var items:[Int] = []
+    var operation:Character = " "
+    var operationNumber: Int = 0
+    var isUsingOld = false
+    var inspections:Int = 0
+    var testDiv:Int = 0
+    var decisionThrowToMonkey:[Int] = [-1, -1]
+}
+
 func Day11_2022() {
     print("ℹ️ Day 11")
     let input = readFile(filename: "Resources/2022_Day_11.txt").map { String($0)}
@@ -20,86 +30,86 @@ func Day11_2022() {
 }
 
 private func Throw(input: [String], iterations: Int, numberOfMonkeys: Int) -> Int {
-    var items = [[Int]](repeating: [Int](repeating: 0, count: 10), count: numberOfMonkeys)
-    var operation:[Character] = []
-    var operationNumber: [Int] = []
-    var isUsingOld:[Bool] = []
-    var inspections = [Int](repeating: 0, count: numberOfMonkeys)
-    var testDiv: [Int] = []
-    var decisionThrowToMonkey = [[Int]](repeating: [Int](repeating: 255, count: 2), count: numberOfMonkeys)
-    var currentMonkey = 0
+    var monkeys:[Monkey] = []
+    var monkey:Monkey?
+
     for line in input {
         if line.contains("Monkey") {
-            currentMonkey = Int(line.components(separatedBy: " ")[1].alphanumeric)!
+            monkey = Monkey()
         }
         else if line.contains("Starting items:") {
             let split = line.components(separatedBy: ": ")
             let itemLine = split[1].components(separatedBy: ", ")
             for i in 0..<itemLine.count {
-                items[currentMonkey][i] = Int(itemLine[i])!
+                monkey?.items.append(Int(itemLine[i])!)
             }
+            
         }
         else if line.contains("Operation:") {
             let split = line.components(separatedBy: " = ")[1]
             let split2 = split.components(separatedBy: " ")
-            operation.append(split2[1][0])
             if split2[2] == "old" {
-                isUsingOld.append(true)
-                operationNumber.append(0)
+                monkey?.isUsingOld = true
+                monkey?.operationNumber = 0
             } else {
-                isUsingOld.append(false)
-                operationNumber.append(Int(split2[2])!)
+                monkey?.isUsingOld = false
+                monkey?.operationNumber = Int(split2[2])!
             }
         }
         else if line.contains("Test:") {
-            testDiv.append(Int(line.components(separatedBy: "by ")[1])!)
+            monkey?.testDiv = Int(line.components(separatedBy: "by ")[1])!
         }
         else if line.contains("true") {
-            decisionThrowToMonkey[currentMonkey][1] = Int(line.components(separatedBy: "monkey ")[1])!
+            monkey?.decisionThrowToMonkey[1] = Int(line.components(separatedBy: "monkey ")[1])!
         }
         else if line.contains("false") {
-            decisionThrowToMonkey[currentMonkey][0] = Int(line.components(separatedBy: "monkey ")[1])!
+            monkey?.decisionThrowToMonkey[0] = Int(line.components(separatedBy: "monkey ")[1])!
+            monkeys.append(monkey!) // last line in input
         }
     }
-    let modulo = testDiv.reduce(1, *)
+    let modulo = monkeys.map {$0.testDiv}
+        .reduce(1, *)
+    
     
     for _ in 0..<iterations {
-        for monkey in 0..<numberOfMonkeys {
-            for item in 0..<items[monkey].count {
-                if items[monkey][item] == 0 { continue }
+        for monkeyNo in 0..<monkeys.count {
+            let monkey = monkeys[monkeyNo]
+            for item in 0..<monkey.items.count {
+                if monkey.items[item] == 0 { continue }
                 
-                let number = isUsingOld[monkey] ? items[monkey][item] : operationNumber[monkey]
+                let number = monkey.isUsingOld ? monkey.items[item] : monkey.operationNumber
                 
-                var new = operation[monkey] == "+" ? items[monkey][item] + number : items[monkey][item] * number
+                var new = monkey.operation == "+" ? monkey.items[item] + number : monkey.items[item] * number
                 if iterations == 20 {
                     new = new / 3
                 }
-                let test = new % testDiv[monkey] == 0
+                let test = new % monkey.testDiv == 0
                 let newNew = new % modulo
-                var newMonkey = 0
+                var nextMonkey = 0
                 if test {
-                    newMonkey = decisionThrowToMonkey[monkey][1]
+                    nextMonkey = monkey.decisionThrowToMonkey[1]
                 }
                 else {
-                    newMonkey = decisionThrowToMonkey[monkey][0]
+                    nextMonkey = monkey.decisionThrowToMonkey[0]
                 }
                 var foundEmpty = false
-                for i in 0..<items[newMonkey].count {
-                    if items[newMonkey][i] == 0 {
-                        items[newMonkey][i] = newNew
+                for i in 0..<monkeys[nextMonkey].items.count {
+                    if monkeys[nextMonkey].items[i] == 0 {
+                        monkeys[nextMonkey].items[i] = newNew
                         foundEmpty = true
                         break
                     }
                 }
                 if !foundEmpty {
-                    items[newMonkey].append(newNew)
+                    monkeys[nextMonkey].items.append(newNew)
                 }
-                items[monkey][item] = 0
-                inspections[monkey] += 1
+                monkey.items[item] = 0
+                monkey.inspections += 1
             }
         }
     }
-    return inspections.sorted(by: >)
+    return monkeys.map {$0.inspections}
+        .sorted(by: >)
         .prefix(2)
         .reduce(1, *)
 }
