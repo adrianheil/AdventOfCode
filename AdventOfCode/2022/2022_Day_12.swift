@@ -22,14 +22,14 @@ private func Part_1(input: [String]) {
     for y in 0..<input.count {
         for x in 0..<input[y].count {
             if input[y][x] == "S" {
-                map[y+1][x+1]=1;
-                startX=y+1;
-                startY=x+1;
+                map[y+1][x+1] = 1
+                startX = y+1
+                startY = x+1
             }
             else if(input[y][x] == "E") {
-                map[y+1][x+1]=26
-                endX=y+1
-                endY=x+1
+                map[y+1][x+1] = 26
+                endX = y+1
+                endY = x+1
             }
             else {
                 map[y+1][x+1] = Int(input[y][x].asciiValue! - 96)
