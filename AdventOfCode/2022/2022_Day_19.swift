@@ -85,10 +85,9 @@ private func Part_1(blueprints: [Blueprint]) -> Int {
     var resultArray:[Int] = []
     for blueprint in blueprints {
         var tryArray:[Int] = []
-        for _ in 0..<99999 {
+        for _ in 0..<499999 {
             tryArray.append(buildRobot(blueprint: blueprint, MAXTIME: MAXTIME))
         }
-        print(tryArray.max()!)
         resultArray.append(tryArray.max()!)
     }
     
@@ -130,13 +129,14 @@ private func buildRobot(blueprint: Blueprint, MAXTIME: Int) -> Int {
             obsidian -= getCost(for: "geode", which: "obsidian", from: blueprint)
         }
         
-        else if rnd <= 0.3 && ore >= getCost(for: "ore", which: "ore", from: blueprint) {
+        // ore
+        else if rnd <= 0.15 && ore >= getCost(for: "ore", which: "ore", from: blueprint) {
             ore -= getCost(for: "ore", which: "ore", from: blueprint)
             roboType = "ore"
         }
             
         // obsidian
-        else if rnd <= 0.7 && ore >= getCost(for: "obsidian", which: "ore", from: blueprint) &&
+        else if rnd <= 0.65 && ore >= getCost(for: "obsidian", which: "ore", from: blueprint) &&
                     clay >= getCost(for: "obsidian", which: "clay", from: blueprint)  {
             
             roboType = "obsidian"
@@ -144,7 +144,7 @@ private func buildRobot(blueprint: Blueprint, MAXTIME: Int) -> Int {
             clay -= blueprint.instructions[getRobotPosition(for: "obsidian")][getSoilPosition(for: "clay")]
         }
         // clay
-        else if rnd <= 0.9 && ore >= getCost(for: "clay", which: "ore", from: blueprint) {
+        else if rnd <= 0.85 && ore >= getCost(for: "clay", which: "ore", from: blueprint) {
             
             roboType = "clay"
             ore -= blueprint.instructions[getRobotPosition(for: "clay")][getSoilPosition(for: "ore")]
