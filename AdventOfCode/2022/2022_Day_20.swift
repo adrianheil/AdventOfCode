@@ -42,7 +42,6 @@ private func decrypt(input: [Int], n: Int) {
 
 private func printIndexPositions(node: [Int]) {
     let zeroIndex = node.firstIndex(of: 0)!
-    print(zeroIndex)
     print(node[(zeroIndex+1000) %% (node.count)] +
           node[(zeroIndex+2000) %% (node.count)] +
           node[(zeroIndex+3000) %% (node.count)])

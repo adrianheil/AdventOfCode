@@ -8,8 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		3A00A3D5293FE27400F2FFA5 /* 2022_Day_07.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A00A3D4293FE27400F2FFA5 /* 2022_Day_07.swift */; };
+		3A02BF5D295395B9003E6417 /* 2022_Day_21.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A02BF5C295395B9003E6417 /* 2022_Day_21.swift */; };
 		3A0458A9294129B200158443 /* 2022_Day_08.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0458A8294129B200158443 /* 2022_Day_08.swift */; };
 		3A072A8A295254CB00C17CB3 /* 2022_Day_20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A072A89295254CB00C17CB3 /* 2022_Day_20.swift */; };
+		3A0BB8382954ECA90086420A /* ComplexModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0BB8372954ECA90086420A /* ComplexModule */; };
+		3A0BB83A2954ECA90086420A /* Numerics in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0BB8392954ECA90086420A /* Numerics */; };
+		3A0BB83C2954ECA90086420A /* RealModule in Frameworks */ = {isa = PBXBuildFile; productRef = 3A0BB83B2954ECA90086420A /* RealModule */; };
 		3A0F15DC2945F2E0002B927B /* 2022_Day_11.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A0F15DB2945F2E0002B927B /* 2022_Day_11.swift */; };
 		3A617888293CA7F300A0E302 /* 2022_Day_04.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A617887293CA7F300A0E302 /* 2022_Day_04.swift */; };
 		3A61788A293D200800A0E302 /* 2021_Day_02.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A617889293D200800A0E302 /* 2021_Day_02.swift */; };
@@ -49,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		3A00A3D4293FE27400F2FFA5 /* 2022_Day_07.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_07.swift; sourceTree = "<group>"; };
+		3A02BF5C295395B9003E6417 /* 2022_Day_21.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_21.swift; sourceTree = "<group>"; };
 		3A0458A8294129B200158443 /* 2022_Day_08.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_08.swift; sourceTree = "<group>"; };
 		3A072A89295254CB00C17CB3 /* 2022_Day_20.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_20.swift; sourceTree = "<group>"; };
 		3A0F15DB2945F2E0002B927B /* 2022_Day_11.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 2022_Day_11.swift; sourceTree = "<group>"; };
@@ -81,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A0BB83A2954ECA90086420A /* Numerics in Frameworks */,
+				3A0BB8382954ECA90086420A /* ComplexModule in Frameworks */,
+				3A0BB83C2954ECA90086420A /* RealModule in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,6 +155,7 @@
 				3AF734BF294F368D001A0A7C /* 2022_Day_18.swift */,
 				3A7E09DF2950C0A2005953F3 /* 2022_Day_19.swift */,
 				3A072A89295254CB00C17CB3 /* 2022_Day_20.swift */,
+				3A02BF5C295395B9003E6417 /* 2022_Day_21.swift */,
 			);
 			path = 2022;
 			sourceTree = "<group>";
@@ -168,6 +177,11 @@
 			dependencies = (
 			);
 			name = AdventOfCode;
+			packageProductDependencies = (
+				3A0BB8372954ECA90086420A /* ComplexModule */,
+				3A0BB8392954ECA90086420A /* Numerics */,
+				3A0BB83B2954ECA90086420A /* RealModule */,
+			);
 			productName = AdventOfCode;
 			productReference = 3AABFFB7293809B3002C31B7 /* AdventOfCode */;
 			productType = "com.apple.product-type.tool";
@@ -197,6 +211,9 @@
 				Base,
 			);
 			mainGroup = 3AABFFAE293809B3002C31B7;
+			packageReferences = (
+				3A0BB8362954ECA90086420A /* XCRemoteSwiftPackageReference "swift-numerics" */,
+			);
 			productRefGroup = 3AABFFB8293809B3002C31B7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,6 +253,7 @@
 				3A7C2E4029485EDD0047B44A /* 2022_Day_13.swift in Sources */,
 				3A617888293CA7F300A0E302 /* 2022_Day_04.swift in Sources */,
 				3AABFFCB29388D7D002C31B7 /* Result_2022.swift in Sources */,
+				3A02BF5D295395B9003E6417 /* 2022_Day_21.swift in Sources */,
 				3AABFFD8293B4DB2002C31B7 /* 2022_Day_03.swift in Sources */,
 				3A61788C293DD2E000A0E302 /* 2022_Day_05.swift in Sources */,
 				3AABFFBB293809B3002C31B7 /* main.swift in Sources */,
@@ -432,6 +450,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A0BB8362954ECA90086420A /* XCRemoteSwiftPackageReference "swift-numerics" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-numerics.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A0BB8372954ECA90086420A /* ComplexModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A0BB8362954ECA90086420A /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = ComplexModule;
+		};
+		3A0BB8392954ECA90086420A /* Numerics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A0BB8362954ECA90086420A /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = Numerics;
+		};
+		3A0BB83B2954ECA90086420A /* RealModule */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A0BB8362954ECA90086420A /* XCRemoteSwiftPackageReference "swift-numerics" */;
+			productName = RealModule;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3AABFFAF293809B3002C31B7 /* Project object */;
 }

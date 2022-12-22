@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Monkey {
+private final class Monkey {
     var items:[Int] = []
     var operation:Character = " "
     var operationNumber: Int = 0
